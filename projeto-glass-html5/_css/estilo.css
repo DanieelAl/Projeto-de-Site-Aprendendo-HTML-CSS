@@ -4,11 +4,12 @@
     font-family: "FonteLogo";
     src: url("../_fonts/bubblegum-sans-regular.otf")
 }
-
+/* Formatação de texto e interface do body*/
 body {
     background-color: #dddddd;
     color: rgb(000, 000, 000);
 }
+
 div#interface {
     width: 900px;
     background-color: #ffffff;
@@ -20,6 +21,8 @@ p {
     text-align: justify;
     text-indent: 50px;
 }
+
+/* Formatação do Cabeçalho da pág*/
 
 header#cabecalho img#icone {
     position: absolute;
@@ -50,7 +53,7 @@ header#cabecalho h2 {
     margin-top: 0px;
 }
 
-/* Formatação de imagens cpmlegendas*/
+/* Formatação de imagens com legendas*/
 
 figure.foto-legenda {
     position: relative;
@@ -118,4 +121,34 @@ nav#menu a {
 
 nav#menu a:hover {
     color: white;
+}
+
+/* Formatação da section, asidee footer: */
+
+section#corpo {
+    display: block;
+    width: 520px;
+    float: left;
+    border-right:1px solid #606060 ;
+    padding-right: 15px ;
+}
+
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
+}
+
+footer#rodape a {
+    text-decoration: none;
+    color: black;
 }
