@@ -162,7 +162,7 @@ aside#lateral h1 {
 aside#lateral h2 {
     background-color: #dddddd;
     font-size: 13pt;
-    color: #ffffff;
+    color: #888888;
     padding: 5px;
 }
 
@@ -230,7 +230,7 @@ header#cabecalho-artigo h1 {
     color: #606060;
     margin-bottom: 0px  ;
 }
-
+    
 header#cabecalho-artigo h2 {
     font-size: 13pt;
     color: #cecece;
