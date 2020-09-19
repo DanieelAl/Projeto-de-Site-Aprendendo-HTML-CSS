@@ -17,3 +17,7 @@ iframe#frame-espec {
 }
 
 não funciona, usar o scrolling=no no html */
+
+area {
+    outline: 0;
+} 
