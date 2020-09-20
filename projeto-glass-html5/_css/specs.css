@@ -19,5 +19,5 @@ iframe#frame-espec {
 não funciona, usar o scrolling=no no html */
 
 area {
-    outline: 0;
+    outline-style: hidden 2px aqua;
 } 
