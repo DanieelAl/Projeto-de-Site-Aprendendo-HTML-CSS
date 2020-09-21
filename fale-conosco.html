@@ -38,36 +38,50 @@
                             <h3 class="direita">Atualizado em 01/Maio/2013</h3>
                         </hgroup>
                     </header>
-                        <form action="">
+                        <form method="POST" id="fContato" action="mailto:vitordaniel10@outlook.com">
                             <fieldset id="usuario"><legend>Identificação do Usuário</legend>
-                                <P>Nome: <input type="text" name="tName" id="cName" size="40" maxlength="50" placeholder="Nome Completo"/></P>
-                                <p>Senha: <input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="Senha"/> </p>
-                                <p>E-mail: <input type="email" name="tEmail" id="cEmail" size="40" maxlength="50" placeholder="E-mail"/></p>
+                                <P><label for="cName">Nome:</label> <input type="text" name="tName" id="cName" size="40" maxlength="50" placeholder="Nome Completo"/></P>
+                                <p><label for="cSenha">Senha:</lable><input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="Senha"/></p>
+                                <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="40" maxlength="50" placeholder="E-mail"/></p>
                             
                                 <fieldset id="sexo"><legend>Sexo</legend> 
-                                    <input type="radio" name="tSexo" id="cMas"/> Masculino
-                                    <input type="radio" name="tSexo" id="cFem"/ > Feminino
+                                    <input type="radio" name="tSexo" id="cMas"/> <label for="cMas">Masculino</label><br/>
+                                    <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</leabe>
                                 </fieldset>
-                                <p>Data de Nascimento:</p>
+                                <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc"/></p>
                             </fieldset>
 
                             <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-                                <p>Logradouro:</p>
-                                <p>Número:</p>
-                                <p>Estado:</p>
-                                <p>Cidade:</p>
+                                <p><label for="cLagra">Logradouro:</label><input type="text" name="tlagra" id="cLagra" size="15" maxlength="50" placeholder="Rua, Av., Travessa..."/></p>
+                                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0"/></p>
+                                <p><label for="cEstado">Estado:</label>
+                                <select name="tEstado" id="cEstado"
+                                    <option value="BA">Bahia</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                </select></p>
+                                <p><label for="cCidade">Cidade:<input type="text" name="tCidade" id="cCidade" size="15" maxlength="40" list="cidades"</label></p>
+                                <datalist id="cidades">
+                                    <option value="Salvador"></option>
+                                    <option value="Lauro de Freitas"></option>
+                                    <option value="Feira de Santana"></option>
+                                </datalist>
                             </fieldset>
 
                             <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
-                                <p>Grau de Urgência:</p>
-                                <p>Mensagem:</p>
+                                <p><label for="cUrg">Grau de Urgência:</label>Sem
+                            <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Muito</p>
+                                <p><label for="cMsg">Mensagem:</label>
+                                <textarea name="tMsg" id="cMsg" cols="150" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
                             </fieldset>
 
                             <fieldset id="pedido"><legend>Quero um Google Glass</legend>
-                                Gostaria de adquirir um Google Glass quando disponível
-                                Cor:
-                                Quantidade:
-                                Preço Total: R$
+                               <p><Label for="cPed">Gostaria de adquirir um Google Glass quando disponível</Label></p> 
+                                <p><label for="cCor">Cor:</label></p>
+                                <p><label for="cQtd">Quantidade:</label></p>
+                                <p><label for="cTot">Preço Total: R$</label></p>
                             </fieldset>
 
                             [BOTÃO ENVIAR]
