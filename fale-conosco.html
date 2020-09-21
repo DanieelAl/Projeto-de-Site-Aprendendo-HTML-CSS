@@ -5,8 +5,16 @@
         <link rel="sortcut icon" href="imagens/miniatura_titulo.png" type="image/png"/>
         <title>Tudo sobre Google glass</title>
         <link rel="stylesheet" href="css/estilo.css"/>
+        <link rel="stylesheet" href="css/form.css"/>
     </head>
     <script lenguage="javascript" src="javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cQtd').value)
+            tot = qtd * 1500;
+            document.getElementById('cTot').value=tot;
+        }
+    </script>
     <body>
         <div id = "interface">
             <header id="cabecalho">
@@ -38,23 +46,23 @@
                             <h3 class="direita">Atualizado em 01/Maio/2013</h3>
                         </hgroup>
                     </header>
-                        <form method="POST" id="fContato" action="mailto:vitordaniel10@outlook.com">
+                        <form method="POST" id="fContato" action="mailto:vitordaniel10@outlook.com" oninput="calc_total();">
                             <fieldset id="usuario"><legend>Identificação do Usuário</legend>
-                                <P><label for="cName">Nome:</label> <input type="text" name="tName" id="cName" size="40" maxlength="50" placeholder="Nome Completo"/></P>
-                                <p><label for="cSenha">Senha:</lable><input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="Senha"/></p>
-                                <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="40" maxlength="50" placeholder="E-mail"/></p>
+                                <P><label for="cName">Nome: </label> <input type="text" name="tName" id="cName" size="25" maxlength="50" placeholder="Nome Completo"/></P>
+                                <p><label for="cEmail">E-mail: </label> <input type="email" name="tEmail" id="cEmail" size="25" maxlength="50" placeholder="E-mail"/></p>
+                                <p><label for="cSenha">Senha: </lable><input type="password" name="tSenha" id="cSenha" size="10" maxlength="10" placeholder="Senha"/></p>
                             
                                 <fieldset id="sexo"><legend>Sexo</legend> 
                                     <input type="radio" name="tSexo" id="cMas"/> <label for="cMas">Masculino</label><br/>
                                     <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</leabe>
                                 </fieldset>
-                                <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc"/></p>
+                                <p><label for="cNasc">Data de Nascimento: </label><input type="date" name="tNasc" id="cNasc"/></p>
                             </fieldset>
 
                             <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-                                <p><label for="cLagra">Logradouro:</label><input type="text" name="tlagra" id="cLagra" size="15" maxlength="50" placeholder="Rua, Av., Travessa..."/></p>
-                                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0"/></p>
-                                <p><label for="cEstado">Estado:</label>
+                                <p><label for="cLagra">Logradouro: </label><input type="text" name="tlagra" id="cLagra" size="15" maxlength="50" placeholder="Rua, Av., Travessa..."/></p>
+                                <p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0"/></p>
+                                <p><label for="cEstado">Estado: </label>
                                 <select name="tEstado" id="cEstado"
                                     <option value="BA">Bahia</option>
                                     <option value="DF">Distrito Federal</option>
@@ -62,7 +70,7 @@
                                     <option value="SC">Santa Catarina</option>
                                     <option value="SP">São Paulo</option>
                                 </select></p>
-                                <p><label for="cCidade">Cidade:<input type="text" name="tCidade" id="cCidade" size="15" maxlength="40" list="cidades"</label></p>
+                                <p><label for="cCidade">Cidade: <input type="text" name="tCidade" id="cCidade" size="15" maxlength="40" list="cidades"</label></p>
                                 <datalist id="cidades">
                                     <option value="Salvador"></option>
                                     <option value="Lauro de Freitas"></option>
@@ -71,20 +79,20 @@
                             </fieldset>
 
                             <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
-                                <p><label for="cUrg">Grau de Urgência:</label>Sem
+                                <p><label for="cUrg">Grau de Urgência: </label>Sem
                             <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Muito</p>
-                                <p><label for="cMsg">Mensagem:</label>
-                                <textarea name="tMsg" id="cMsg" cols="150" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                                <p><label for="cMsg">Mensagem: </label>
+                                <textarea name="tMsg" id="cMsg" cols="30" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
                             </fieldset>
 
                             <fieldset id="pedido"><legend>Quero um Google Glass</legend>
-                               <p><Label for="cPed">Gostaria de adquirir um Google Glass quando disponível</Label></p> 
-                                <p><label for="cCor">Cor:</label></p>
-                                <p><label for="cQtd">Quantidade:</label></p>
-                                <p><label for="cTot">Preço Total: R$</label></p>
+                               <p><input type="checkbox" name="tPedido" id="cPedido" checked/><Label for="cPed">Gostaria de adquirir um Google Glass quando disponível</Label></p> 
+                                <p><label for="cCor">Cor: <input type="color" name="tCor" id="cCor" value="#ffffff"/></label></p>
+                                <p><label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="1"/></label></p>
+                                <p><label for="cTot">Preço Total: R$<input type="text" name="tTot" id="cTot" placeholder="Valor a pagar" readonly/></label></p>
                             </fieldset>
 
-                            [BOTÃO ENVIAR]
+                            <input type="image" name="tEnviar" id="cEnviar" src="imagens/botao-enviar.png">
                         </form>
                 </article>        
             </section>

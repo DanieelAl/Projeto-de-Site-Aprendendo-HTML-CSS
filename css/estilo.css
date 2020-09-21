@@ -247,3 +247,11 @@ header#cabecalho-artigo h3 {
 .direita {
     text-align: right;
 }
+
+video#filmeum{
+    width: 500px;
+}
+
+video#filme02{
+    width: 350px;
+}
